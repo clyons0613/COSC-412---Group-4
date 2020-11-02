@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+    <title>Healthy boys</title>
+    
+</head>
+
+<body>
+    
+    <nav>
+        
+        <div class="logo">
+            <h4>
+              <a href="/Project/Frontend/index.html">
+                Healthy Habitz
+              </a>
+            </h4>
+        </div>
+
+        <ul class = "nav-link">
+
+            <li> 
+                <a href="#"> Game </a>
+            </li>
+            
+            <li> <a href="#"> About us</a>  
+            </li>
+
+            <li> <a href="#"> Support </a>  
+            </li>
+
+            <li> <a href="#" id="logout" > Log out </a>  
+            </li>
+
+            <li> <a href="/Project/LoginSystem/login.html"> Log in</a>  
+            </li>
+
+
+        </ul>
+
+
+        <div class="burger">
+            <div class =  "lines1"></div>
+            <div class =  "lines2"></div>
+            <div class =  "lines3"></div>
+        </div>
+
+    </nav>
+
+    <div class="hero">
+      <div class="form-box">
+        
+
+        <form class = "login" id = "login-form" class="input=group">
+          <input type="email" id = "login-email" class = "input-field" placeholder="Email" required>
+          <input type="password" id = "login-password" class = "input-field" placeholder="Enter password" required>
+          <button type = "submit" class = "submit-btn"> Log in </button>
+        </form>
+        
+        <h4>
+          Don't have an account? 
+          <a href="/Project/LoginSystem/signup.html"> Sign up! </a>  
+        </h4>
+
+      </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+  
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyD-IXNtUqN0xnmjqvT5Wu9MuDcSY3_B16s",
+        authDomain: "test-35c28.firebaseapp.com",
+        databaseURL: "https://test-35c28.firebaseio.com",
+        projectId: "test-35c28",
+        storageBucket: "test-35c28.appspot.com",
+        messagingSenderId: "428028025178",
+        appId: "1:428028025178:web:0d80d9ad7b722c8ea57b63",
+        measurementId: "G-GF6L1TFD1X"
+      };
+      
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    
+      db.settings({ timestampInSnapshots: true})
+    
+    </script>
+    
+   
+    <script src="/Project/LoginSystem/index.js"></script>
+    
+
+</body>
+
+
+</html>
