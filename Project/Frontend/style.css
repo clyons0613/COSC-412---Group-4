@@ -30,6 +30,10 @@ nav{
     letter-spacing: 5px;
     font-size: 20px;
 }
+.logo a{
+    color: black;
+  }
+  
 
 
 .nav-link{

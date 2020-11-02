@@ -1,3 +1,11 @@
+auth.onAuthStateChanged(user => {
+    if (user) {
+      console.log("User is logged in ", user);
+    } else {
+      console.log("User is logged out");
+    }
+  })
+
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -15,6 +23,6 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
-        console.log("user signed out")
+
     })
 });
