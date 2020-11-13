@@ -3,6 +3,7 @@ auth.onAuthStateChanged(user => {
       console.log("User is logged in ", user);
     } else {
       console.log("User is logged out");
+
     }
   })
 
@@ -13,4 +14,6 @@ logout.addEventListener('click', (e) => {
     auth.signOut().then(() => {
 
     })
+    alert('Logged out')
+    window.location = '/Project/Frontend/index.html'
 });

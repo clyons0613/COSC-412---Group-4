@@ -53,36 +53,29 @@
     </nav>
 
    
-    
+    <div class="payment">
+      
+      <div class="text1">
+        
+        <h1>Donate to US Dept of Health and Human Services!</h1>
+        <p>
+          Results of a recent study commissioned by the US Dept of Health and Human Services (or DHHS) has revealed that the general population is largely unaware that proper nutrition and exercise are vital to overall good health.  Furthermore, the study revealed that the average person is more likely to develop a sustained interest in physical activity and a healthy lifestyle if they are provided with some type of interactive, technology-based tool to stimulate their interest in the areas.        
+                    Rapidly increasing public interest in developing sustainable, healthy lifestyles has led the DHHS to form the Healthy Lifestyles (or HL) committee.  The goal of this committee will be managing the creation of a technology-based gaming tool to meet this need. The HL Committee made the decision to engage Subject Matter Experts (SMEs) from various related industries including fitness, medical, health/nutrition and technology, to determine the initial needs of the product and lead this effort to fruition.  
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AXDjWIKJmfPDZs_8zigbxvJToQOOaN9gS9MtLu3ccEW1qBkLJzqpL0Yx_2iZYGmWwD9dHqpVdPXftxMX"></script>
-    <div id="paypal-button-container">
-        <h1>Donate to US Dept of Health and Human Services</h1>
+        </p>
+
+      </div>
+      
+        
+        <div id="paypal-button-container" style="width: 20%">
+         <h1 style="text-align: center;"> Donate $5.00!</h1>
+        </div>
+
     </div>
 
+    
+   
 
-    <script>
-        paypal.Buttons({
-          createOrder: function(data, actions) {
-            // This function sets up the details of the transaction, including the amount and line item details.
-            return actions.order.create({
-              purchase_units: [{
-                amount: {
-                  value: '5.00'
-                }
-              }]
-            });
-          },
-          onApprove: function(data, actions) {
-            // This function captures the funds from the transaction.
-            return actions.order.capture().then(function(details) {
-              // This function shows a transaction success message to your buyer.
-              alert('Transaction completed by ' + details.payer.name.given_name);
-            });
-          }
-        }).render('#paypal-button-container');
-        //This function displays Smart Payment Buttons on your web page.
-      </script>
     
 
     
@@ -122,7 +115,47 @@
 
     </div>
 
-    
+    <script src="https://www.paypal.com/sdk/js?client-id=AXDjWIKJmfPDZs_8zigbxvJToQOOaN9gS9MtLu3ccEW1qBkLJzqpL0Yx_2iZYGmWwD9dHqpVdPXftxMX"></script>
+
+    <script>
+      paypal.Buttons({
+        
+      
+      
+        style: {
+                color:  'blue',
+                shape:  'pill',
+                label:  'pay',
+                height: 40
+            },
+
+        
+        createOrder: function(data, actions) {
+          // This function sets up the details of the transaction, including the amount and line item details.
+      
+          
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '5.00'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          // This function captures the funds from the transaction.
+          return actions.order.capture().then(function(details) {
+            // This function shows a transaction success message to your buyer.
+            alert('Transaction completed by ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#paypal-button-container');
+      //This function displays Smart Payment Buttons on your web page.
+    </script>
+
+
+
+  
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
