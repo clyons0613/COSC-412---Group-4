@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Healthy boys</title>
+    <link rel="icon" href="HH_Logo.png">
+  </head>
+
+<body>
+    
+<nav>
+        
+    <div class="logo">
+        <h4>
+            <a href="/">
+              Healthy Habitz
+            </a>
+          </h4>
+    </div>
+
+    <ul class = "nav-link">
+
+        <li> 
+            <a href="/game"> Game </a>
+        </li>
+        
+        <li> <a href="/about"> About us</a>  
+        </li>
+
+        <li> <a href="/support"> Support </a>  
+        </li>
+
+        <li> <a href="/" id="logout"> Log out </a>  
+        </li>
+
+        <li> <a href="/login"> Log in</a>  
+        </li>
+
+
+    </ul>
+
+
+
+</nav>
+
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Healthy choices</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            
+            <img src="froggy1.png" alt="">
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <div class = "container1">
+      <h1>Single Player Trivia</h1> <a href="/trivia"> <button>Click here</button></a>
+      <h1>Multiplayer Trivia</h1><a href="/trivia"> <button>Click here</button></a>
+     <src s>
+
+     </src>
+     <src>
+
+     </src>
+  </div>
+
+-->
+
+
+
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+  
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyD-IXNtUqN0xnmjqvT5Wu9MuDcSY3_B16s",
+        authDomain: "test-35c28.firebaseapp.com",
+        databaseURL: "https://test-35c28.firebaseio.com",
+        projectId: "test-35c28",
+        storageBucket: "test-35c28.appspot.com",
+        messagingSenderId: "428028025178",
+        appId: "1:428028025178:web:0d80d9ad7b722c8ea57b63",
+        measurementId: "G-GF6L1TFD1X"
+      };
+      
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    
+      db.settings({ timestampInSnapshots: true})
+    
+    </script>
+    
+
+    <script src="logout.js"></script>
+    
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="questions.js"></script> 
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
